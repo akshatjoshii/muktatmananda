@@ -1,0 +1,1681 @@
+/*
+  Author: Lumberjacks
+  Template: Puppet (Landing Page)
+  Version: 1.0
+  URL: http://themeforest.net/user/Lumberjacks/
+*/
+
+
+
+/* TABLE OF CONTENTS
+
+  1. Import section
+  2. Basic styles
+  3. Typography
+  4. Breakpoint for high-res devices
+  5. Menu
+  6. Header
+  7. Subscribe
+  8. Icons
+  9. Promo
+  10. Statistics
+  11. Download
+  12. Reviews
+  13. Features
+  14. Tabs
+  15. Team
+  16. Clients
+  17. Video
+  18. Testimonials
+  19. Footer
+  20. Breakpoints
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+  @import url("bootstrap.css");
+  @import url("http://fonts.googleapis.com/css?family=Open+Sans:700,300,600&subset=latin,latin-ext");
+  @import url("font-awesome.min.css");
+  @import url("featherlight.css");
+  @import url("slick.css");
+  @import url("jquery.wordrotator.css");
+  @import url("animate.min.css");
+
+
+
+/* 2. BASIC STYLES */
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font: 16px/1.5 "Open Sans", "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #fff;
+    color: #576077;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { 
+    color: #50bae2;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  a:hover {
+    color: #50bae2;
+  }
+
+  a, a:hover, a:active, a:focus {
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+  }
+
+  .lj-float-left {
+    float: left;
+  }
+
+  .lj-float-right {
+    float: right;
+  }
+  
+  .lj-block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .lj-show {
+    display: block !important;
+  }
+  
+  .lj-hide {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .lj-preloader {
+    background: #c0c7da url('../img/preloader.svg') no-repeat center center;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+
+
+
+/* 3. TYPOGRAPHY */
+
+  p {
+    line-height: 1.5;
+  }
+    
+  .lj-text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .lj-text-center {
+    text-align: center;
+  }
+
+  .lj-text-left {
+    text-align: left;
+  }
+
+  .lj-text-right {
+    text-align: right;
+  }
+
+  .lj-text-justify {
+    text-align: justify;
+  }
+
+  .lj-text-underline {
+    text-decoration: underline;
+  }
+
+
+
+/* 4. BREAKPOINT FOR HIGH-RES DEVICES */
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+
+    .lj-logo-1x {
+      display: none !important;
+    }
+    
+    .lj-logo-2x {
+      display: block !important;
+    }
+
+  } 
+
+
+
+/* 5. MENU */
+
+  .menu {
+    padding: 50px 0;
+    background-color: #f4f5f9;
+  }
+  
+  .lj-logo a,
+  .lj-logo img {
+    width: 120px;
+    height: 80px;
+  }
+  
+  .lj-logo a {
+    display: inline-block;
+  }
+  
+  .lj-logo img {
+    vertical-align: bottom;
+  }
+  
+  .lj-logo-1x {
+    display: block;
+  }
+  
+  .lj-logo-2x {
+    display: none;
+  }
+
+  .lj-socials {
+    text-align: right;
+  }
+
+  .lj-socials ul {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    text-align: right;
+  }
+
+  .lj-socials ul li {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 20px;
+    height: 40px;
+  }
+
+  .lj-socials ul li a {
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 0.875em;
+    border: 2px solid transparent;
+    color: #576077;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    line-height: 40px;
+  }
+
+  .lj-socials ul li a:hover {
+    border: 2px solid #50bae2;
+    color: #50bae2;
+  }
+
+
+
+/* 6. HEADER */
+
+  header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff !important;
+  }
+  
+  header > .container {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+  
+  .lj-overlay {
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .lj-background-repeat {
+      background-repeat: repeat;
+  }
+  
+  .lj-background-no-repeat {
+    background-repeat: no-repeat;
+  }
+  
+  .lj-overlay-none {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .lj-overlay-image {
+    background-image: url('../img/lines.png');
+    background-repeat: repeat;
+  }
+  
+  .lj-overlay-color {
+      background-color: rgba(255,255,255,0.85);
+  }
+  
+  .lj-overlay-gradient {
+    background: -moz-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%, rgba(196,255,0,0.8) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,204,255,0.8)), color-stop(100%,rgba(196,255,0,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* IE10+ */
+    background: linear-gradient(215deg,  rgba(0,204,255,0.8) 0%,rgba(196,255,0,0.8) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#c4ff00',GradientType=1 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/1x1.png'); /* IE6-9 fallback on horizontal gradient */
+    pointer-events:none;
+  }
+
+  header.yt-background {
+    background-image: url('../img/vid.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .mobile .mbYTP_wrapper,
+  .tablet .mbYTP_wrapper {
+    z-index: -1 !important;
+  }
+
+  .mobile .yt-controls,
+  .tablet .yt-controls {
+    display: none;
+  }
+
+  .yt-controls {
+    text-align: right;
+    margin-bottom: 100px;
+  }
+
+  .yt-controls span {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid #576077;
+    color: #576077;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+  }
+
+  .yt-controls a {
+    display: inline-block;
+    color: #576077;
+    width: 20px;
+  }
+
+  .yt-controls a:hover { 
+    color: #50bae2;
+  }
+  
+  .lj-title > span {
+    color: #576077;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-title h1 {
+    font-size: 4em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+    word-wrap: break-word;
+  }
+  
+  .lj-title h1 strong {
+    color: #576077;
+    font-weight: 700;
+  }
+
+  .lj-title-paragraph {
+    margin-top: 25px;
+  }
+
+  .lj-title-paragraph p {
+    color: #576077;
+    margin: 0;
+  }
+
+
+
+/* 7. SUBSCRIBE */
+
+  .subscribe {
+    padding: 150px 0;
+    background-color: #50bae2;
+  }
+
+  .lj-subscribe span {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-subscribe h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+  }
+
+  .lj-subscribe h3 strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .lj-subscribe-form {
+    margin-top: 50px;
+  }
+
+  .lj-subscribe-form input:focus {
+    outline: 0;
+  }
+
+  .lj-subscribe-form input[type=text],
+  .lj-subscribe-form input[type=submit] {
+    height: 60px; 
+    display: inline-block;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;  
+  }
+
+  .lj-subscribe-form input[type=text] {
+    width: 300px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 300;
+    padding: 0 25px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 0;
+    -webkit-border-top-left-radius: 30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-topleft: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .lj-subscribe-form input[type=text]:focus {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 0;
+  }
+
+  .lj-subscribe-form input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+      color: #fff;
+  }
+  .lj-subscribe-form input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color: #fff;
+     opacity: 1;
+  }
+  .lj-subscribe-form input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color: #fff;
+     opacity: 1;
+  }
+  .lj-subscribe-form input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+     color: #fff;
+  }
+
+  .lj-subscribe-form input[type=submit] {
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 25px;
+    border: 2px solid #fff;
+    -webkit-border-top-right-radius: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+    -moz-border-radius-topright: 30px;
+    -moz-border-radius-bottomright: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .lj-subscribe-form input[type=submit]:hover {
+    color: #50bae2;
+    background-color: #fff;
+  }
+
+  .lj-subscribe-message {
+    display: block;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 15px;
+  }
+
+  .lj-subscribe-message i {
+    margin-right: 5px;
+  }
+
+  .lj-subscribe-message .fa-warning {
+    color: #fff;
+  }
+
+  .lj-subscribe-message .fa-check {
+    color: #fff;
+  }
+
+
+
+/* 8. ICONS */
+  
+  .icons {
+    padding: 150px 0;
+    background-color: #fff;
+  }
+
+  .lj-icons-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-icons-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-icons-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-icon-box > div {
+    margin-top: 50px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-icon-box i {
+    font-size: 6em;
+    margin-bottom: 20px;
+  }
+
+  .lj-icon-box h4 {
+    font-weight: 600;
+    margin: 5px 0 0;
+    text-transform: uppercase;
+  }
+
+  .lj-icon-box p {
+    font-size: 0.9em;
+    margin: 15px 0 0;
+  }
+
+  .lj-icon-box-one i,
+  .lj-icon-box-one h4 {
+    color: #43cb83;
+  }
+  .lj-icon-box-two i,
+  .lj-icon-box-two h4 {
+    color: #50bae2;
+  }
+  .lj-icon-box-three i,
+  .lj-icon-box-three h4 {
+    color: #f57846;
+  }
+  .lj-icon-box-four i,
+  .lj-icon-box-four h4 {
+    color: #f9b954;
+  }  
+
+
+
+/* 9. PROMO */
+
+  .promo {
+    padding: 150px 0;
+    background-color: #576077;
+  }
+
+  .lj-promo-title span {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-promo-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+  }
+
+  .lj-promo-title h3 strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .lj-promo p {
+    color: #fff;
+    margin: 25px 0 0;
+  }
+
+  .lj-promo-button,
+  .lj-promo-button:focus {
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+    display: inline-block;
+    color: #50bae2;
+    background-color: transparent;
+    border: 2px solid #50bae2;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 0;
+    padding: 0 25px; 
+  }
+
+  .lj-promo-button:hover {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #576077;
+  }
+
+  .lj-promo-more,
+  .lj-promo-more:focus {
+    line-height: 56px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-left: 25px;
+  }
+
+
+
+/* 10. STATISTICS */
+
+  .statistics {
+    padding: 150px 0;
+    background-color: #fff;
+  }
+
+  .lj-statistics-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-statistics-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-statistics-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-statistics-paragraph p {
+    color: #576077;
+    margin: 25px 0 0;
+  }
+
+  .lj-statistics-box {
+    margin-top: 50px;
+  }
+
+  .lj-statistics-box i {
+    font-size: 4em;
+  }
+
+  .lj-statistics-box span {
+    font-size: 3em;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .lj-statistics-box p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+
+  .lj-statistics-one i {
+    color: #43cb83;
+  }
+
+  .lj-statistics-two i {
+    color: #50bae2;
+  }
+
+  .lj-statistics-three i {
+    color: #f57846;
+  }
+
+  .lj-statistics-four i {
+    color: #f9b954;
+  }
+
+
+
+/* 11. DOWNLOAD */
+
+  .download {
+    padding: 150px 0;
+    background-color: #43cb83;
+  }
+
+  .lj-download-title span {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-download-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+  }
+
+  .lj-download-title h3 strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .lj-download-details p {
+    color: #fff;
+    margin: 50px 0 0;
+  }
+
+  .lj-download-details p strong {
+    font-weight: 600;
+  }
+
+  .lj-download-details a,
+  .lj-download-details a:focus {
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 50px 0 0;
+    padding: 0 25px;
+  }
+
+  .lj-download-details a i {
+    font-size: 1.25em;
+    margin-right: 5px;
+  }
+
+  .lj-download-details a:first-of-type {
+    margin-right: 25px;
+  }
+
+  .lj-download-details a:hover {
+    color: #fff;
+    background-color: #3bb373;
+    border: 2px solid #3bb373;
+  }
+
+  .lj-download-image img {
+    max-width: 100%;
+    margin: 50px 0 0;
+  }
+
+
+
+/* 12. REVIEWS */
+
+  .reviews {
+    background-color: #fff;
+    padding: 100px 0;
+  }
+
+  .lj-reviews-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-reviews-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-reviews-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-reviews-paragraph p {
+    color: #576077;
+    margin: 25px 0 0;
+  }
+
+  .lj-review-box {
+    margin-top: 50px;
+  }
+
+  .lj-review-box h4 {
+    color: #576077;
+    font-weight: 600;
+    font-size: 1.25em;
+  }
+
+  .lj-review-box span {
+    margin: 25px 0 0;
+  }
+
+  .lj-review-box span i {
+    font-size: 2em;
+    color: #ffd200;
+    margin-right: 5px;
+  }
+
+  .lj-review-box p {
+    font-size: 0.9em;
+    margin: 25px 0 0;
+  }
+
+
+
+/* 13. FEATURES */
+
+  .features {
+    background-color: #fff;
+    padding: 100px 0;
+  }
+
+  .lj-features-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-features-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-features-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-features-paragraph p {
+    color: #576077;
+    margin: 25px 0 0;
+  }
+  
+  .lj-feature-box {
+    margin-top: 50px;
+  }
+  
+  .lj-feature-box h4 {
+    color: #576077;
+    font-weight: 600;
+    font-size: 1.25em;
+  }
+
+  .lj-feature-box h4 i {
+    color: #43cb83;
+    margin-right: 10px;
+  }
+
+  .lj-feature-box p {
+    font-size: 0.9em;
+    margin: 25px 0 0;
+  }
+
+  .lj-feature-buttons {
+    text-align: center;
+  }
+
+  .lj-feature-buttons a,
+  .lj-feature-buttons a:focus {
+    height: 60px;
+    line-height: 56px;
+    text-align: center;
+    display: inline-block;
+    color: #50bae2;
+    background-color: transparent;
+    border: 2px solid #50bae2;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 50px 0 0;
+    padding: 0 25px;
+  }
+
+  .lj-feature-buttons a i {
+    font-size: 1.25em;
+    margin-right: 5px;
+  }
+
+  .lj-feature-buttons a:first-child {
+    margin-right: 25px;
+  }
+
+  .lj-feature-buttons a:hover {
+    color: #fff;
+    background-color: #50bae2;
+    border: 2px solid #50bae2;
+  }
+
+
+
+/* 14. TABS */
+
+  .tabs {
+    background-color: #f4f5f9;
+    padding: 100px 0 0;
+  }
+
+  .lj-tabs-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-tabs-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-tabs-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-tabs-paragraph p {
+    color: #576077;
+    margin: 25px 0 0;
+  }
+
+  .lj-tabs-photo img {
+    max-width: 100%;
+    margin: 50px 0 0;
+    display: none;
+  }
+
+  .lj-tabs {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .lj-tabs li {    
+    color: #576077;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0 25px;
+    height: 40px; 
+    line-height: 40px; 
+    cursor: pointer;
+    box-shadow: inset 0 -2px #d1d3d2;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-tabs li:hover {
+    box-shadow: inset 0 -2px #74777b;
+  }
+
+  .lj-tabs li.lj-tabs-active {
+    color: #43cb83;
+    box-shadow: inset 0 -2px #43cb83;
+  }
+
+  .lj-tabs-content > div {
+    display: none;
+  }
+
+  .lj-tabs-content p {
+    font-size: 0.9em;
+    margin: 25px 0 0;    
+  }
+ 
+  .lj-tabs-person p {    
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-tabs-person span {
+    text-transform: none;
+  }
+
+
+
+/* 15. TEAM */
+
+  .team {
+    background-color: #f4f5f9;
+    padding: 100px 0;
+  }
+
+  .lj-team-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-team-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-team-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-team {
+    margin-top: 50px;
+  }
+
+  .lj-team .row {
+    margin-bottom: 30px;
+  }
+
+  .lj-team .row:last-child {
+    margin-bottom: 0;
+  }
+
+  .lj-team-person {
+    margin: 0;
+    position: relative;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-team-person img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-backface-visibility: hidden;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+  }
+
+  .lj-team-person:hover img {
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    transform: translateY(-60px); 
+    z-index: 20;
+  }
+
+  .lj-team-person:hover div {
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px); 
+    z-index: 19;
+  }
+
+  .lj-team-person div {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #2b2f3e;
+    height: 150px;
+    padding: 50px 0 20px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+    text-align: center;
+    -webkit-border-bottom-right-radius: 30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .lj-team-person div p {
+    margin: 0 0 20px;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+
+  .lj-team-person div p:last-child {
+    margin: 0;
+  }
+
+  .lj-team-person div a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    color: #c0c7da;
+    font-size: 1.25em;
+  }
+
+  .lj-team-person div a:hover {
+    color: #747d93;
+  }
+
+
+
+/* 16. CLIENTS */
+
+  .clients {
+    background-color: #fff;
+    padding: 150px 0;
+  }
+
+  .lj-clients-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-clients-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-clients-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-clients {
+    margin-top: 50px;
+  }
+
+  .lj-clients-item img { 
+    max-width: 100%;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity=25);
+    -moz-opacity: 0.25;
+    -khtml-opacity: 0.25;
+    opacity: 0.25;  
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+    margin: 0 auto;
+    -webkit-backface-visibility: hidden;
+    filter: url("data:image/svg+xml;utf8,#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  }
+
+  .lj-clients-item img:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1; 
+    filter: none;
+    -webkit-filter: none;
+  }
+
+
+
+/* 17. VIDEO */
+
+  .video {
+    background-color: #fff;
+    padding: 250px 0;
+  }
+
+  .lj-video-title span {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-video-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+  }
+
+  .lj-video-title h3 strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .lj-video-box {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .lj-video-box a {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    font-size: 2em;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 96px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+  }
+
+  .lj-video-box a:hover {
+    color: #fff;
+    background-color: #50bae2;
+    border: 2px solid #50bae2;    
+  }
+
+  .lj-video-box a i {
+    margin-left: 5px;
+  }
+
+  .lj-video {
+    display: none;
+  }
+
+
+
+/* 18. TESTIMONIALS */
+
+  .testimonials {
+    background-color: #f4f5f9;
+    padding: 100px 0;
+  }
+
+  .lj-testimonials-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-testimonials-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #576077;
+    margin: 0;
+  }
+
+  .lj-testimonials-title h3 strong {
+    color: #576077;
+    font-weight: 600;
+  }
+
+  .lj-testimonials-paragraph p {
+    color: #576077;
+    margin: 25px 0 0;
+  }
+
+  .lj-testimonials > div {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .lj-testimonials blockquote {
+    position: relative;
+    font-size: 0.9em;
+    margin: 0 20px 20px;
+    padding: 20px;
+    color: #fff;
+    background-color: #c0c7da;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  .lj-testimonials blockquote:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: #c0c7da transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -10px;
+    left: 50px;
+  }
+
+  .lj-testimonials > div img {
+    margin-left: 40px;
+    width: 75px;
+    height: 75px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 75px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .lj-testimonials > div p {
+    display: inline-block;
+    color: #576077;
+    font-size: 0.9em;
+    margin: 15px 0 0 10px;
+    text-align: left;
+  }
+
+  .lj-testimonials > div p strong {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+  }
+
+  .slick-dots li button:hover,
+  .slick-dots li.slick-active button { 
+    background-color: #50bae2;
+    border: 2px solid #50bae2;
+  }
+
+  .slick-dots li button {
+    background-color: transparent;
+    border: 2px solid #c1c8db;
+  }
+
+
+
+/* 19. FOOTER */
+
+  .footer {
+    background-color: #3f3f4d;
+    padding: 100px 0;
+  }
+
+  .lj-footer-title span {
+    color: #c0c7da;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .lj-footer-title h3 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #f7f8fc;
+    margin: 0;
+  }
+
+  .lj-footer-title h3 strong {
+    color: #f7f8fc;
+    font-weight: 600;
+  }
+
+  .lj-footer-address {
+    color: #c0c7da;
+    margin-top: 50px;
+  }
+
+  .lj-footer-address p {
+    margin: 25px 0 0;
+  }
+
+  .lj-footer-address p:first-child {
+    margin: 0;
+  }
+
+  .lj-footer-address strong {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .lj-contact-message {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 25px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 0.9em;
+  }
+
+  .lj-contact-message i {
+    margin-right: 5px;
+  }
+
+  .lj-contact-message .fa-warning {
+    color: #e25050;
+  }
+
+  .lj-contact-message .fa-check {
+    color: #43cb83;
+  }
+
+  .lj-footer-contact input[type=text],
+  .lj-footer-contact input[type=submit],
+  .lj-footer-contact textarea {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;   
+    border: 2px solid #c0c7da;
+    background-color: transparent;
+    color: #c0c7da;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+  }
+
+  .lj-footer-contact input[type=text],
+  .lj-footer-contact input[type=submit] {
+    height: 60px;
+    line-height: 56px;
+    padding: 0 25px;
+  }
+
+  .lj-footer-contact input[type=text],
+  .lj-footer-contact textarea {  
+    width: 100%;  
+    margin-bottom: 25px;
+  }
+
+  .lj-footer-contact input[type=submit] {
+    color: #50bae2;
+    background-color: transparent;
+    border: 2px solid #50bae2;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 25px;
+  }
+
+  .lj-footer-contact input[type=submit]:hover {
+    color: #fff;
+    background-color: #50bae2;
+    border: 2px solid #50bae2;   
+  }
+
+  .lj-footer-contact textarea {
+    height: 230px;
+    padding: 15px 25px;
+    resize: none;
+    vertical-align: top;
+    overflow: hidden;
+  }
+
+  .lj-footer-contact input[type=text]:focus,
+  .lj-footer-contact input[type=submit]:focus,
+  .lj-footer-contact textarea:focus {
+    outline: 0;
+    border: 2px solid #50bae2;
+  }
+
+  .lj-footer-contact-right {
+    text-align: right;
+  }
+
+
+
+/* 20. BREAKPOINTS */
+
+  @media (max-width: 1199px) {
+
+    /* 14. TABS */
+
+    .lj-tabs-photo {
+      text-align: center;
+    }
+
+    .lj-tabs-box {
+      margin-bottom: 100px;
+    }
+  
+  }
+
+  @media (max-width: 991px) {
+
+    /* 15. TEAM */
+
+    .lj-team {
+      margin-top: 20px;
+    }
+
+    .lj-team .row {
+      margin-bottom: 0;
+    }
+
+    .lj-team-person {
+      margin-top: 30px;
+    }
+
+    .lj-team-person div p {
+      font-size: 0.85em;
+      margin: 0 0 10px;
+    }
+  
+  }
+  
+  @media (max-width: 767px) {
+
+    /* 5. MENU */
+
+    .lj-logo,
+    .lj-socials,
+    .lj-socials ul {
+      text-align: center;
+    }
+
+    .lj-socials ul li {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    /* 6. HEADER */
+
+    .lj-title h1 {
+      font-size: 3em;
+    }
+
+    .wordsrotator_words {      
+      white-space: pre-line;
+    }
+
+    .lj-title > span,
+    .lj-title h1,
+    .lj-title-paragraph p {
+      padding: 0 20px;
+    }
+
+    .lj-button-right {
+      margin-top: 20px;
+    }
+
+    /* 7. SUBSCRIBE */
+
+    .lj-subscribe-form input[type=text],
+    .lj-subscribe-form input[type=submit] {
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      border: 2px solid #fff;
+    }
+
+    .lj-subscribe-form input[type=text] {
+      width: 85%;
+    }
+
+    .lj-subscribe-form input[type=text]:focus {
+      border: 2px solid #fff;
+    }
+    
+    .lj-subscribe-form input[type=submit] {
+      margin-top: 25px;
+    }
+
+    /* 8. ICONS */
+
+    .lj-icon-box:first-child > div {
+      margin-top: 0;
+    }
+
+    .lj-icon-box > div {
+      margin-top: 20px;
+    }
+
+    .lj-icon-box span {
+      font-size: 6em;
+    }
+
+    .lj-icon-box h4 {
+      font-size: 1.5em;
+    }
+
+    .lj-icon-box p {
+      font-size: 1em;
+    }
+
+    /* 10. STATISTICS */
+
+    .lj-statistics-box span {
+      font-size: 2em;
+    }
+
+    /* 14. TABS */
+
+    .lj-tabs li {
+      padding: 0 15px;
+    }
+
+    /* 18. TESTIMONIALS */
+
+    .lj-testimonial {
+      margin-top: 25px;
+    }
+
+    /* 19. FOOTER */
+
+    .lj-contact-message {
+      margin-top: 10px;
+    }
+
+  }
+
+  @media (max-width: 479px) {
+
+    /* 11. DOWNLOAD */
+
+    .lj-download-details a {
+      margin: 50px 25px 0 0;      
+    }
+
+    /* 13. FEATURES */
+
+    .lj-feature-buttons a {
+      margin: 50px 25px 0;
+    }
+
+    /* 14. TABS */
+
+    .lj-team-person div {
+      height: 100px;
+    }
+
+    .lj-team-person:hover div {
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+
+    .lj-team-person div p:last-child {
+      display: none;
+    }
+
+  }
+
+.logo{
+  height: auto !important;
+  vertical-align: top;
+  width: 168px !important;
+  margin-top: -53px;
+}
